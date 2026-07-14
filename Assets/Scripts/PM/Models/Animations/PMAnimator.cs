@@ -73,7 +73,7 @@ namespace PM.Models.Animations
 
 
 
-                    if (isStartWithRotate && time > Duration - speed - 1)
+                    if (isStartWithRotate && time > Duration - speed + 1)
                     {
                         if (!flipped)
                         {
