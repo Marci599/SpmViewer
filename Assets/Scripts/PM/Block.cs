@@ -38,8 +38,10 @@ namespace PM
         {
             MemoryStream stream = new();
             bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-            Texture2D tex = new(1, 1);
-            tex.LoadImage(stream.ToArray());
+            Texture2D tex = new(1, 1, TextureFormat.RGBA32, false);
+            tex.LoadImage(stream.ToArray(), false);
+            tex.filterMode = FilterMode.Point;
+   
             return tex;
         }
     }

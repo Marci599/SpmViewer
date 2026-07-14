@@ -7,7 +7,8 @@ public class AnimationWindow : ImWindow
 	public int ComboAnimIndex;
 	readonly string[] AnimItems;
 
-	public AnimationWindow(MainGui m) : base(m)
+
+    public AnimationWindow(MainGui m) : base(m)
 	{
 		Title = "Animation";
 		Flags = ImGuiWindowFlags.NoDocking | ImGuiWindowFlags.NoResize | ImGuiWindowFlags.AlwaysAutoResize;
@@ -39,7 +40,9 @@ public class AnimationWindow : ImWindow
 
 		if (prevIndex != ComboAnimIndex)
 			AnimChange();
-	}
+
+        ImGui.Checkbox("End with a rotate", ref Model.Animator.isStartWithRotate);
+    }
 
 	void AnimChange()
 	{

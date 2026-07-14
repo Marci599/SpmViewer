@@ -71,7 +71,7 @@ public class MainGui : MonoBehaviour
 
 	void DrawGizmos()
 	{
-		Matrix4x4 view = sceneCamera.worldToCameraMatrix;
+		/*Matrix4x4 view = sceneCamera.worldToCameraMatrix;
 		Matrix4x4 proj = sceneCamera.projectionMatrix;
 		Matrix4x4 m = Matrix4x4.identity;
 
@@ -84,7 +84,7 @@ public class MainGui : MonoBehaviour
 				model.transform.position = m.GetColumn(3);
 			if (ImGuizmo.Manipulate(ref view.m00, ref proj.m00, OPERATION.ROTATE, MODE.LOCAL, ref m.m00))
 				model.transform.rotation = m.rotation;
-		}
+		}*/
 	}
 
 	void OnLayout(UImGui.UImGui obj)
